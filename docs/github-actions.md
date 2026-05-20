@@ -1,48 +1,41 @@
 # CI/CD (GitHub Actions)
 
-## Что делает pipeline
+Репозиторий: [Amindlog/agrosis](https://github.com/Amindlog/agrosis)
+
+## Pipeline
 
 | Job | Когда | Действие |
 |-----|--------|----------|
-| **Validate** | push / PR в `main` | `npm ci`, проверка HTML, наличие ключевых файлов |
-| **Deploy** | push в `main` | публикация статики на **GitHub Pages** |
+| **Validate** | push / PR в `main` | проверка HTML и ключевых файлов |
+| **Deploy** | push в `main` | публикация в ветку `gh-pages` |
 
-## Первый запуск
+## Ошибка `Get Pages site failed` / `HttpError: Not Found`
 
-1. Создайте репозиторий на GitHub и привяжите его:
+Она возникает, если в workflow используется `actions/configure-pages`, а в репозитории **не включён** GitHub Pages с источником «GitHub Actions».
+
+Сейчас деплой идёт через **[peaceiris/actions-gh-pages](https://github.com/peaceiris/actions-gh-pages)** — ветка `gh-pages`, без `configure-pages`.
+
+### Один раз в настройках GitHub
+
+1. **Settings → Pages**
+2. **Build and deployment → Source:** `Deploy from a branch`
+3. **Branch:** `gh-pages` → папка `/ (root)`
+4. **Settings → Actions → General → Workflow permissions:** `Read and write permissions`
+
+### Запуск
 
 ```bash
-cd "/home/amind/Документы/agrosis"
-git init
 git add .
-git commit -m "Initial commit"
-git branch -M main
-git remote add origin https://github.com/ВАШ_АККАУНТ/agrosis.git
-git push -u origin main
+git commit -m "Fix deploy: use gh-pages branch"
+git push origin main
 ```
 
-2. **Включите GitHub Pages** (обязательно, иначе деплой падает с `HttpError: Not Found`):
+После успешного workflow сайт: **https://amindlog.github.io/agrosis/**
 
-   **Settings → Pages → Build and deployment → Source: `GitHub Actions`**
-
-   Workflow также пытается включить Pages через API при первом деплое; если ошибка остаётся — включите вручную в настройках и перезапустите workflow (**Actions → CI/CD → Re-run**).
-
-3. После успешного workflow сайт будет по адресу:
-
-`https://ВАШ_АККАУНТ.github.io/agrosis/`
-
-(имя репозитория в URL).
-
-4. Для своего домена (`agrosistemy.ru`): **Settings → Pages → Custom domain**.
-
-## Локально
+### Локально
 
 ```bash
 npm install
-npm run validate   # та же проверка, что в CI
-npm run dev        # http://localhost:3000
+npm run validate
+npm run dev   # http://localhost:3000
 ```
-
-## Примечание
-
-На GitHub Pages ссылки вида `href="/"` ведут на корень домена, а не в папку репозитория. Для project site при необходимости замените их на `index.html` или настройте custom domain на корне.
