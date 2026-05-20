@@ -21,7 +21,11 @@ git remote add origin https://github.com/ВАШ_АККАУНТ/agrosis.git
 git push -u origin main
 ```
 
-2. В репозитории на GitHub: **Settings → Pages → Build and deployment** → Source: **GitHub Actions**.
+2. **Включите GitHub Pages** (обязательно, иначе деплой падает с `HttpError: Not Found`):
+
+   **Settings → Pages → Build and deployment → Source: `GitHub Actions`**
+
+   Workflow также пытается включить Pages через API при первом деплое; если ошибка остаётся — включите вручную в настройках и перезапустите workflow (**Actions → CI/CD → Re-run**).
 
 3. После успешного workflow сайт будет по адресу:
 
