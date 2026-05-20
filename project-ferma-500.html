@@ -1,0 +1,376 @@
+<!DOCTYPE html>
+<html lang="ru">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Ферма на 500 голов — проект GEA и SCR | Агросистемы</title>
+    <meta name="description" content="Поставка и пусконаладка доильного оборудования GEA и SCR для фермы на 500 голов в Татарстане." />
+    <link rel="canonical" href="https://agrosistemy.ru/project-ferma-500.html" />
+<link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="css/main.css?v=35" />
+  </head>
+  <body id="top">
+    <header class="header">
+      <div class="container header__inner">
+        <a href="index.html" class="logo" aria-label="Агросистемы">
+          <img src="public/assets/Logo.svg" alt="Агросистемы" class="logo__icon" width="190" height="32" />
+        </a>
+
+        <nav class="nav nav--desktop" aria-label="Основная навигация">
+          <a href="about.html" class="nav__link">О компании</a>
+          <a href="projects.html" class="nav__link">Проекты</a>
+          <a href="contacts.html" class="nav__link">Контакты</a>
+        </nav>
+
+        <div class="header__actions">
+          <a href="catalog.html" class="header__icon-btn header__icon-btn--catalog" aria-label="Каталог">
+            <img src="public/assets/icon-menu.svg" alt="" width="20" height="20" />
+          </a>
+          <button
+            type="button"
+            class="header__icon-btn header__icon-btn--menu"
+            id="menuToggle"
+            aria-label="Открыть меню"
+            aria-expanded="false"
+            aria-controls="mobileNav"
+          >
+            <span class="burger" aria-hidden="true"></span>
+          </button>
+          <div class="header__cart-wrap">
+            <button
+              type="button"
+              class="header__icon-btn header__icon-btn--cart"
+              id="cartToggle"
+              data-cart-trigger
+              aria-label="Корзина"
+              aria-expanded="false"
+              aria-controls="cartPopover"
+            >
+              <img src="public/assets/icon-cart-black.svg" alt="" width="20" height="20" />
+            </button>
+            <a href="cart.html" class="btn btn--primary btn--cart-desktop" data-cart-trigger>
+              <img src="public/assets/icon-cart.svg" alt="" class="btn__icon" width="20" height="20" />
+              Корзина
+            </a>
+            <div class="cart-popover" id="cartPopover" role="dialog" aria-label="Корзина">
+              <p class="cart-popover__header">Корзина</p>
+              <ul class="cart-popover__list" id="cartPopoverList">
+                <li class="cart-item" data-unit-price="1900">
+                  <img
+                    class="cart-item__img"
+                    src="https://images.unsplash.com/photo-1583337130417-3346a1be7dee?w=200&q=80"
+                    alt="Молочный счётчик Afimilk"
+                  />
+                  <div class="cart-item__info">
+                    <p class="cart-item__name">Молочный счётчик Afimilk</p>
+                    <div class="cart-item__controls">
+                      <div class="cart-item__qty">
+                        <button type="button" data-qty-minus aria-label="Уменьшить">−</button>
+                        <span data-qty-value>1</span>
+                        <button type="button" data-qty-plus aria-label="Увеличить">+</button>
+                      </div>
+                      <p class="cart-item__line-total"><span data-line-total>1 900</span> ₽</p>
+                    </div>
+                  </div>
+                  <button type="button" class="cart-item__remove" data-remove-cart-item aria-label="Удалить">
+                    <svg width="20" height="20" viewBox="0 0 20 20" fill="none" aria-hidden="true">
+                      <path d="M2.5 5h15M6.667 5V3.333a1.667 1.667 0 011.666-1.666h3.334a1.667 1.667 0 011.666 1.666V5m2.5 0v11.667a1.667 1.667 0 01-1.666 1.666H5.833a1.667 1.667 0 01-1.666-1.666V5h11.666" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+                    </svg>
+                  </button>
+                </li>
+                <li class="cart-item" data-unit-price="188">
+                  <img
+                    class="cart-item__img"
+                    src="https://images.unsplash.com/photo-1581091226825-a6a2a5aee158?w=200&q=80"
+                    alt="Молочный счётчик Afimilk"
+                  />
+                  <div class="cart-item__info">
+                    <p class="cart-item__name">Молочный счётчик Afimilk</p>
+                    <div class="cart-item__controls">
+                      <div class="cart-item__qty">
+                        <button type="button" data-qty-minus aria-label="Уменьшить">−</button>
+                        <span data-qty-value>25</span>
+                        <button type="button" data-qty-plus aria-label="Увеличить">+</button>
+                      </div>
+                      <p class="cart-item__line-total"><span data-line-total>4 700</span> ₽</p>
+                    </div>
+                  </div>
+                  <button type="button" class="cart-item__remove" data-remove-cart-item aria-label="Удалить">
+                    <svg width="20" height="20" viewBox="0 0 20 20" fill="none" aria-hidden="true">
+                      <path d="M2.5 5h15M6.667 5V3.333a1.667 1.667 0 011.666-1.666h3.334a1.667 1.667 0 011.666 1.666V5m2.5 0v11.667a1.667 1.667 0 01-1.666 1.666H5.833a1.667 1.667 0 01-1.666-1.666V5h11.666" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+                    </svg>
+                  </button>
+                </li>
+                <li class="cart-item" data-unit-price="3750">
+                  <img
+                    class="cart-item__img"
+                    src="https://images.unsplash.com/photo-1628088062854-d1870b4553da?w=200&q=80"
+                    alt="Молочный счётчик Afimilk"
+                  />
+                  <div class="cart-item__info">
+                    <p class="cart-item__name">Молочный счётчик Afimilk</p>
+                    <div class="cart-item__controls">
+                      <div class="cart-item__qty">
+                        <button type="button" data-qty-minus aria-label="Уменьшить">−</button>
+                        <span data-qty-value>4</span>
+                        <button type="button" data-qty-plus aria-label="Увеличить">+</button>
+                      </div>
+                      <p class="cart-item__line-total"><span data-line-total>15 000</span> ₽</p>
+                    </div>
+                  </div>
+                  <button type="button" class="cart-item__remove" data-remove-cart-item aria-label="Удалить">
+                    <svg width="20" height="20" viewBox="0 0 20 20" fill="none" aria-hidden="true">
+                      <path d="M2.5 5h15M6.667 5V3.333a1.667 1.667 0 011.666-1.666h3.334a1.667 1.667 0 011.666 1.666V5m2.5 0v11.667a1.667 1.667 0 01-1.666 1.666H5.833a1.667 1.667 0 01-1.666-1.666V5h11.666" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+                    </svg>
+                  </button>
+                </li>
+                <li class="cart-item" data-unit-price="456">
+                  <img
+                    class="cart-item__img"
+                    src="https://images.unsplash.com/photo-1560493676-04071c5f467b?w=200&q=80"
+                    alt="Молочный счётчик Afimilk"
+                  />
+                  <div class="cart-item__info">
+                    <p class="cart-item__name">Молочный счётчик Afimilk</p>
+                    <div class="cart-item__controls">
+                      <div class="cart-item__qty">
+                        <button type="button" data-qty-minus aria-label="Уменьшить">−</button>
+                        <span data-qty-value>16</span>
+                        <button type="button" data-qty-plus aria-label="Увеличить">+</button>
+                      </div>
+                      <p class="cart-item__line-total"><span data-line-total>7 296</span> ₽</p>
+                    </div>
+                  </div>
+                  <button type="button" class="cart-item__remove" data-remove-cart-item aria-label="Удалить">
+                    <svg width="20" height="20" viewBox="0 0 20 20" fill="none" aria-hidden="true">
+                      <path d="M2.5 5h15M6.667 5V3.333a1.667 1.667 0 011.666-1.666h3.334a1.667 1.667 0 011.666 1.666V5m2.5 0v11.667a1.667 1.667 0 01-1.666 1.666H5.833a1.667 1.667 0 01-1.666-1.666V5h11.666" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+                    </svg>
+                  </button>
+                </li>
+              </ul>
+              <p class="cart-popover__empty" id="cartPopoverEmpty" hidden>Корзина пуста</p>
+              <div class="cart-popover__footer" id="cartPopoverFooter">
+                <p class="cart-popover__total">
+                  <span class="cart-popover__total-label">Итого:</span><span class="cart-popover__total-value"><strong id="cartPopoverTotal">28 896</strong> ₽</span>
+                </p>
+                <a href="cart.html" class="btn btn--primary btn--lg cart-popover__checkout">
+                  Оформить заказ
+                </a>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div class="mobile-nav" id="mobileNav" aria-hidden="true">
+        <div class="mobile-nav__backdrop" id="mobileNavBackdrop"></div>
+        <nav class="mobile-nav__panel" aria-label="Мобильное меню">
+          <a href="index.html" class="mobile-nav__logo" aria-label="Агросистемы">
+            <img src="public/assets/Logo.svg" alt="Агросистемы" width="190" height="32" />
+          </a>
+          <a href="catalog.html" class="mobile-nav__catalog btn btn--catalog">Каталог</a>
+          <a href="about.html" class="mobile-nav__link">О компании</a>
+          <a href="projects.html" class="mobile-nav__link">Проекты</a>
+          <a href="contacts.html" class="mobile-nav__link">Контакты</a>
+        </nav>
+      </div>
+    </header>
+
+    <main class="project-page page-inner">
+      <div class="container">
+        <nav class="breadcrumbs" aria-label="Хлебные крошки">
+          <span class="breadcrumbs__item"><a href="index.html">Главная</a></span>
+          <span class="breadcrumbs__sep" aria-hidden="true">/</span>
+          <span class="breadcrumbs__item"><a href="projects.html">Проекты</a></span>
+          <span class="breadcrumbs__sep" aria-hidden="true">/</span>
+          <span class="breadcrumbs__item breadcrumbs__item--current">Ферма на 500 голов</span>
+        </nav>
+
+        <header class="project-hero">
+          <img class="project-hero__img" src="https://images.unsplash.com/photo-1625246333195-78d9c38ad449?w=1400&q=85" alt="Ферма на 500 голов" width="1216" height="480" />
+          <div class="project-hero__content">
+            <ul class="project-tags"><li class="project-tags__item">Доильный зал</li><li class="project-tags__item">Татарстан</li><li class="project-tags__item">2023</li><li class="project-tags__item">GEA / SCR</li></ul>
+            <h1 class="project-hero__title">Ферма на 500 голов</h1>
+            <p class="project-hero__lead">Поставка и пусконаладка оборудования GEA и SCR для роторной доильной установки.</p>
+          </div>
+        </header>
+
+        <div class="project-layout">
+          <div class="project-main">
+            <section class="project-section" aria-labelledby="project-task-heading">
+              <h2 id="project-task-heading" class="project-section__title">Задача</h2>
+              <p class="project-section__text">
+                Заказчик строил новый молочный комплекс и нуждался в поставщике, способном закрыть весь цикл —
+                от технического задания доильного зала до сервисного сопровождения после запуска. Требовалось
+                оборудование мирового уровня с гарантией запчастей и выездом инженеров в регион.
+              </p>
+            </section>
+
+            <section class="project-section" aria-labelledby="project-solution-heading">
+              <h2 id="project-solution-heading" class="project-section__title">Решение</h2>
+              <p class="project-section__text">
+                Специалисты «Агросистемы» разработали планировку зала «ёлочка», подобрали установки DeLaval
+                и смонтировали вакуумную систему, молокопровод, станцию промывки и линию охлаждения. Поставка
+                шла поэтапно в соответствии с графиком строительства объекта.
+              </p>
+              <ul class="project-list">
+                <li>2 доильных зала на 48 и 52 места</li>
+                <li>Вакуумная станция и магистраль под ключ</li>
+                <li>Автоматическая система промывки</li>
+                <li>Обучение операторов и зоотехников</li>
+              </ul>
+            </section>
+
+            <section class="project-section" aria-labelledby="project-result-heading">
+              <h2 id="project-result-heading" class="project-section__title">Результат</h2>
+              <p class="project-section__text">
+                Зал введён в эксплуатацию в согласованный срок. Средний надой на оператора вырос на 12% по
+                сравнению с предыдущей площадкой заказчика, сократились простои из‑за поломок за счёт
+                регламентного сервиса и склада запчастей в Ижевске.
+              </p>
+            </section>
+          </div>
+
+          <aside class="project-aside" aria-label="Параметры проекта">
+            <dl class="project-facts">
+              <div class="project-facts__row">
+                <dt>Регион</dt>
+                <dd>Татарстан</dd>
+              </div>
+              <div class="project-facts__row">
+                <dt>Год</dt>
+                <dd>2023</dd>
+              </div>
+              <div class="project-facts__row">
+                <dt>Масштаб</dt>
+                <dd>500 голов</dd>
+              </div>
+              <div class="project-facts__row">
+                <dt>Оборудование</dt>
+                <dd>GEA, SCR</dd>
+              </div>
+              <div class="project-facts__row">
+                <dt>Срок работ</dt>
+                <dd>3 месяца</dd>
+              </div>
+              <div class="project-facts__row">
+                <dt>Услуги</dt>
+                <dd>Поставка, монтаж, ПНР</dd>
+              </div>
+            </dl>
+            <a href="contacts.html" class="btn btn--primary btn--lg project-aside__btn">Заказать консультацию</a>
+          </aside>
+        </div>
+
+        <div class="project-gallery" aria-label="Фотографии проекта">
+          <figure class="project-gallery__item">
+            <img class="project-gallery__img" src="https://images.unsplash.com/photo-1560493676-04071c5f467b?w=600&q=80" alt="Роторная доильная установка" loading="lazy" width="400" height="300" />
+          </figure>
+          <figure class="project-gallery__item">
+            <img class="project-gallery__img" src="https://images.unsplash.com/photo-1581091226825-a6a2a5aee158?w=600&q=80" alt="Монтаж оборудования" loading="lazy" width="400" height="300" />
+          </figure>
+          <figure class="project-gallery__item">
+            <img class="project-gallery__img" src="https://images.unsplash.com/photo-1625246333195-78d9c38ad449?w=600&q=80" alt="Доильный зал в эксплуатации" loading="lazy" width="400" height="300" />
+          </figure>
+        </div>
+
+        <section class="project-related" aria-labelledby="project-related-heading">
+          <h2 id="project-related-heading" class="project-related__title">Другие проекты</h2>
+          <div class="project-related__grid">
+            <article class="project-related__card">
+              <img class="project-related__img" src="https://images.unsplash.com/photo-1560493676-04071c5f467b?w=600&q=80" alt="" loading="lazy" width="400" height="250" />
+              <div class="project-related__body">
+                <h3 class="project-related__name"><a href="project-modernizaciya.html">Модернизация доильного зала</a></h3>
+                <p class="project-related__text">Воронежская область, 2024</p>
+              </div>
+            </article>
+            <article class="project-related__card">
+              <img class="project-related__img" src="https://images.unsplash.com/photo-1416879595882-3373a0488b85?w=600&q=80" alt="" loading="lazy" width="400" height="250" />
+              <div class="project-related__body">
+                <h3 class="project-related__name"><a href="project-udmurtiya.html">Сельхозкомплекс в Удмуртии</a></h3>
+                <p class="project-related__text">Ижевск, 2022</p>
+              </div>
+            </article>
+            <article class="project-related__card">
+              <img class="project-related__img" src="https://images.unsplash.com/photo-1625246333195-78d9c38ad449?w=600&q=80" alt="" loading="lazy" width="400" height="250" />
+              <div class="project-related__body">
+                <h3 class="project-related__name"><a href="project-ferma-500.html">Ферма на 500 голов</a></h3>
+                <p class="project-related__text">Татарстан, 2023</p>
+              </div>
+            </article>
+          </div>
+        </section>
+      </div>
+    </main>
+
+    <footer class="footer" id="contacts">
+      <div class="footer__newsletter-band">
+        <div class="container">
+          <div class="footer__newsletter">
+            <div class="footer__newsletter-text">
+              <h2 class="footer__newsletter-title">Подпишитесь на нашу рассылку</h2>
+              <p class="footer__newsletter-desc">
+                Мы не рассылаем спам. Только полезные новости и специальные предложения
+              </p>
+            </div>
+            <form class="footer__form" action="#" method="post">
+              <input type="email" class="footer__input" placeholder="Ваш email" required aria-label="Email" />
+              <button type="submit" class="btn btn--primary btn--lg btn--footer-subscribe">Подписаться</button>
+            </form>
+          </div>
+        </div>
+      </div>
+      <div class="container footer__body">
+        <div class="footer__main">
+          <div class="footer__brand">
+            <a href="index.html" class="logo" aria-label="Агросистемы">
+              <img src="public/assets/Logo.svg" alt="Агросистемы" class="footer__logo" width="190" height="32" />
+            </a>
+            <p class="footer__tagline">Надёжный поставщик доильного оборудования для молочных ферм</p>
+          </div>
+          <div class="footer__links">
+            <div>
+              <h3 class="footer__col-title">Категории</h3>
+              <ul class="footer__link-list">
+                <li><a href="catalog.html" class="footer__link">DeLaval</a></li>
+                <li><a href="catalog.html" class="footer__link">GEA</a></li>
+                <li><a href="catalog.html" class="footer__link">InterPlus</a></li>
+                <li><a href="catalog.html" class="footer__link">Крепежные элементы</a></li>
+              </ul>
+            </div>
+            <div>
+              <h3 class="footer__col-title footer__col-title--hidden">Категории</h3>
+              <ul class="footer__link-list">
+                <li><a href="catalog.html" class="footer__link">Оборудование для доения</a></li>
+                <li><a href="catalog.html" class="footer__link">Транспортер навозоудаления</a></li>
+              </ul>
+            </div>
+            <div>
+              <h3 class="footer__col-title">Агросистемы</h3>
+              <ul class="footer__link-list">
+                <li><a href="about.html" class="footer__link">О компании</a></li>
+                <li><a href="projects.html" class="footer__link">Проекты</a></li>
+                <li><a href="contacts.html" class="footer__link">Контакты</a></li>
+                <li><a href="cart.html" class="footer__link">Оплата и доставка</a></li>
+              </ul>
+            </div>
+          </div>
+        </div>
+        <div class="footer__bottom">
+          <p class="footer__copy">© 2022. ООО «Агросистемы». Все права защищены</p>
+          <div class="footer__social">
+            <a href="#" aria-label="YouTube"><img src="public/assets/social-youtube.png" alt="" width="24" height="24" /></a>
+            <a href="#" aria-label="ВКонтакте"><img src="public/assets/social-vk.png" alt="" width="24" height="24" /></a>
+          </div>
+        </div>
+      </div>
+    </footer>
+
+    <script src="js/main.js?v=11"></script>
+  </body>
+</html>
