@@ -1,0 +1,12 @@
+{
+  "name": "agrosis",
+  "private": true,
+  "scripts": {
+    "start": "npx --yes serve . -p 3000",
+    "dev": "npx --yes serve . -p 3000",
+    "validate": "html-validate --config .htmlvalidate.json \"*.html\""
+  },
+  "devDependencies": {
+    "html-validate": "^9.4.0"
+  }
+}

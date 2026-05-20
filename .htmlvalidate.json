@@ -1,0 +1,16 @@
+{
+  "extends": ["html-validate:recommended"],
+  "rules": {
+    "void-style": "off",
+    "hidden-focusable": "off",
+    "attr-quotes": "off",
+    "no-trailing-whitespace": "off",
+    "prefer-native-element": "off",
+    "aria-label-misuse": "off",
+    "form-dup-name": "off",
+    "tel-non-breaking": "off",
+    "unique-landmark": "off",
+    "attribute-allowed-values": "off",
+    "close-order": "warn"
+  }
+}

@@ -1,0 +1,459 @@
+<!DOCTYPE html>
+<html lang="ru">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Корзина — оформление заказа | Агросистемы</title>
+    <meta
+      name="description"
+      content="Оформление заказа доильного оборудования в интернет-магазине Агросистемы. Доставка по России, оплата по счёту."
+    />
+    <link rel="canonical" href="https://agrosistemy.ru/cart.html" />
+    <script type="application/ld+json">
+      {
+        "@context": "https://schema.org",
+        "@type": "BreadcrumbList",
+        "itemListElement": [
+          { "@type": "ListItem", "position": 1, "name": "Главная", "item": "https://agrosistemy.ru/" },
+          { "@type": "ListItem", "position": 2, "name": "Каталог", "item": "https://agrosistemy.ru/catalog.html" },
+          { "@type": "ListItem", "position": 3, "name": "Корзина", "item": "https://agrosistemy.ru/cart.html" }
+        ]
+      }
+    </script>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="css/main.css?v=35" />
+  </head>
+  <body id="top" class="page-inner page-checkout">
+    <header class="header header--checkout">
+      <div class="container header--checkout__wrap">
+        <div class="header__inner">
+          <a href="index.html" class="logo" aria-label="Агросистемы">
+            <img src="public/assets/Logo.svg" alt="Агросистемы" class="logo__icon" width="190" height="32" />
+          </a>
+
+          <nav class="nav nav--desktop" aria-label="Основная навигация">
+            <a href="about.html" class="nav__link">О компании</a>
+            <a href="projects.html" class="nav__link">Проекты</a>
+            <a href="contacts.html" class="nav__link">Контакты</a>
+          </nav>
+
+          <div class="header__actions">
+            <button
+              type="button"
+              class="header__icon-btn header__icon-btn--menu"
+              id="menuToggle"
+              aria-label="Открыть меню"
+              aria-expanded="false"
+              aria-controls="mobileNav"
+            >
+              <span class="burger" aria-hidden="true"></span>
+            </button>
+          <div class="header__cart-wrap">
+            <button
+              type="button"
+              class="header__icon-btn header__icon-btn--cart is-active"
+              id="cartToggle"
+              data-cart-trigger
+              aria-label="Корзина"
+              aria-expanded="false"
+              aria-controls="cartPopover"
+            >
+              <img src="public/assets/icon-cart-black.svg" alt="" width="20" height="20" />
+            </button>
+            <a href="cart.html" class="btn btn--primary btn--cart-desktop is-active" data-cart-trigger aria-current="page">
+              <img src="public/assets/icon-cart.svg" alt="" class="btn__icon" width="20" height="20" />
+              Корзина
+            </a>
+            <div class="cart-popover" id="cartPopover" role="dialog" aria-label="Корзина">
+              <p class="cart-popover__header">Корзина</p>
+              <ul class="cart-popover__list" id="cartPopoverList">
+                <li class="cart-item" data-unit-price="1900">
+                  <img
+                    class="cart-item__img"
+                    src="https://images.unsplash.com/photo-1583337130417-3346a1be7dee?w=200&q=80"
+                    alt="Молочный счётчик Afimilk"
+                  />
+                  <div class="cart-item__info">
+                    <p class="cart-item__name">Молочный счётчик Afimilk</p>
+                    <div class="cart-item__controls">
+                      <div class="cart-item__qty">
+                        <button type="button" data-qty-minus aria-label="Уменьшить">−</button>
+                        <span data-qty-value>1</span>
+                        <button type="button" data-qty-plus aria-label="Увеличить">+</button>
+                      </div>
+                      <p class="cart-item__line-total"><span data-line-total>1 900</span> ₽</p>
+                    </div>
+                  </div>
+                  <button type="button" class="cart-item__remove" data-remove-cart-item aria-label="Удалить">
+                    <svg width="20" height="20" viewBox="0 0 20 20" fill="none" aria-hidden="true">
+                      <path d="M2.5 5h15M6.667 5V3.333a1.667 1.667 0 011.666-1.666h3.334a1.667 1.667 0 011.666 1.666V5m2.5 0v11.667a1.667 1.667 0 01-1.666 1.666H5.833a1.667 1.667 0 01-1.666-1.666V5h11.666" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+                    </svg>
+                  </button>
+                </li>
+                <li class="cart-item" data-unit-price="188">
+                  <img
+                    class="cart-item__img"
+                    src="https://images.unsplash.com/photo-1581091226825-a6a2a5aee158?w=200&q=80"
+                    alt="Молочный счётчик Afimilk"
+                  />
+                  <div class="cart-item__info">
+                    <p class="cart-item__name">Молочный счётчик Afimilk</p>
+                    <div class="cart-item__controls">
+                      <div class="cart-item__qty">
+                        <button type="button" data-qty-minus aria-label="Уменьшить">−</button>
+                        <span data-qty-value>25</span>
+                        <button type="button" data-qty-plus aria-label="Увеличить">+</button>
+                      </div>
+                      <p class="cart-item__line-total"><span data-line-total>4 700</span> ₽</p>
+                    </div>
+                  </div>
+                  <button type="button" class="cart-item__remove" data-remove-cart-item aria-label="Удалить">
+                    <svg width="20" height="20" viewBox="0 0 20 20" fill="none" aria-hidden="true">
+                      <path d="M2.5 5h15M6.667 5V3.333a1.667 1.667 0 011.666-1.666h3.334a1.667 1.667 0 011.666 1.666V5m2.5 0v11.667a1.667 1.667 0 01-1.666 1.666H5.833a1.667 1.667 0 01-1.666-1.666V5h11.666" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+                    </svg>
+                  </button>
+                </li>
+                <li class="cart-item" data-unit-price="3750">
+                  <img
+                    class="cart-item__img"
+                    src="https://images.unsplash.com/photo-1628088062854-d1870b4553da?w=200&q=80"
+                    alt="Молочный счётчик Afimilk"
+                  />
+                  <div class="cart-item__info">
+                    <p class="cart-item__name">Молочный счётчик Afimilk</p>
+                    <div class="cart-item__controls">
+                      <div class="cart-item__qty">
+                        <button type="button" data-qty-minus aria-label="Уменьшить">−</button>
+                        <span data-qty-value>4</span>
+                        <button type="button" data-qty-plus aria-label="Увеличить">+</button>
+                      </div>
+                      <p class="cart-item__line-total"><span data-line-total>15 000</span> ₽</p>
+                    </div>
+                  </div>
+                  <button type="button" class="cart-item__remove" data-remove-cart-item aria-label="Удалить">
+                    <svg width="20" height="20" viewBox="0 0 20 20" fill="none" aria-hidden="true">
+                      <path d="M2.5 5h15M6.667 5V3.333a1.667 1.667 0 011.666-1.666h3.334a1.667 1.667 0 011.666 1.666V5m2.5 0v11.667a1.667 1.667 0 01-1.666 1.666H5.833a1.667 1.667 0 01-1.666-1.666V5h11.666" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+                    </svg>
+                  </button>
+                </li>
+                <li class="cart-item" data-unit-price="456">
+                  <img
+                    class="cart-item__img"
+                    src="https://images.unsplash.com/photo-1560493676-04071c5f467b?w=200&q=80"
+                    alt="Молочный счётчик Afimilk"
+                  />
+                  <div class="cart-item__info">
+                    <p class="cart-item__name">Молочный счётчик Afimilk</p>
+                    <div class="cart-item__controls">
+                      <div class="cart-item__qty">
+                        <button type="button" data-qty-minus aria-label="Уменьшить">−</button>
+                        <span data-qty-value>16</span>
+                        <button type="button" data-qty-plus aria-label="Увеличить">+</button>
+                      </div>
+                      <p class="cart-item__line-total"><span data-line-total>7 296</span> ₽</p>
+                    </div>
+                  </div>
+                  <button type="button" class="cart-item__remove" data-remove-cart-item aria-label="Удалить">
+                    <svg width="20" height="20" viewBox="0 0 20 20" fill="none" aria-hidden="true">
+                      <path d="M2.5 5h15M6.667 5V3.333a1.667 1.667 0 011.666-1.666h3.334a1.667 1.667 0 011.666 1.666V5m2.5 0v11.667a1.667 1.667 0 01-1.666 1.666H5.833a1.667 1.667 0 01-1.666-1.666V5h11.666" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+                    </svg>
+                  </button>
+                </li>
+              </ul>
+              <p class="cart-popover__empty" id="cartPopoverEmpty" hidden>Корзина пуста</p>
+              <div class="cart-popover__footer" id="cartPopoverFooter">
+                <p class="cart-popover__total">
+                  <span class="cart-popover__total-label">Итого:</span><span class="cart-popover__total-value"><strong id="cartPopoverTotal">28 896</strong> ₽</span>
+                </p>
+                <a href="cart.html" class="btn btn--primary btn--lg cart-popover__checkout">
+                  Оформить заказ
+                </a>
+              </div>
+            </div>
+          </div>
+          </div>
+        </div>
+
+        <div class="header__toolbar">
+          <a href="catalog.html" class="btn btn--catalog header__toolbar-catalog">
+            <img src="public/assets/icon-menu.svg" alt="" class="btn__icon" width="20" height="20" />
+            Каталог
+          </a>
+          <form class="header__search header__search--toolbar" role="search" action="catalog.html" method="get">
+            <input type="search" name="q" class="header__search-input" placeholder="Поиск" aria-label="Поиск по каталогу" />
+            <button type="submit" class="header__search-btn" aria-label="Найти">
+              <svg width="20" height="20" viewBox="0 0 20 20" fill="none" aria-hidden="true">
+                <path
+                  d="M9.16667 15.8333C12.8486 15.8333 15.8333 12.8486 15.8333 9.16667C15.8333 5.48477 12.8486 2.5 9.16667 2.5C5.48477 2.5 2.5 5.48477 2.5 9.16667C2.5 12.8486 5.48477 15.8333 9.16667 15.8333Z"
+                  stroke="currentColor"
+                  stroke-width="1.67"
+                  stroke-linecap="round"
+                  stroke-linejoin="round"
+                />
+                <path d="M17.5 17.5L13.875 13.875" stroke="currentColor" stroke-width="1.67" stroke-linecap="round" stroke-linejoin="round" />
+              </svg>
+            </button>
+          </form>
+        </div>
+      </div>
+
+      <div class="mobile-nav" id="mobileNav" aria-hidden="true">
+        <div class="mobile-nav__backdrop" id="mobileNavBackdrop"></div>
+        <nav class="mobile-nav__panel" aria-label="Мобильное меню">
+          <a href="index.html" class="mobile-nav__logo" aria-label="Агросистемы">
+            <img src="public/assets/Logo.svg" alt="Агросистемы" width="190" height="32" />
+          </a>
+          <a href="catalog.html" class="mobile-nav__catalog btn btn--catalog">Каталог</a>
+          <a href="about.html" class="mobile-nav__link">О компании</a>
+          <a href="projects.html" class="mobile-nav__link">Проекты</a>
+          <a href="contacts.html" class="mobile-nav__link">Контакты</a>
+        </nav>
+      </div>
+    </header>
+
+    <main class="checkout-page">
+      <div class="container">
+        <nav class="breadcrumbs" aria-label="Хлебные крошки">
+          <span class="breadcrumbs__item"><a href="index.html">Главная</a></span>
+          <span class="breadcrumbs__sep" aria-hidden="true">/</span>
+          <span class="breadcrumbs__item breadcrumbs__item--current">Корзина</span>
+        </nav>
+
+        <div class="checkout-layout">
+          <section class="checkout-cart" aria-label="Товары в корзине">
+            <ul class="checkout-cart__list" id="checkoutCartList">
+              <li class="cart-line" data-unit-price="1900">
+                <button type="button" class="cart-line__remove" data-remove-line aria-label="Удалить товар">×</button>
+                <a href="catalog.html" class="cart-line__img-wrap">
+                  <img
+                    class="cart-line__img"
+                    src="https://images.unsplash.com/photo-1583337130417-3346a1be7dee?w=200&q=80"
+                    alt="Молочный счётчик Afimilk"
+                    width="80"
+                    height="80"
+                  />
+                </a>
+                <div class="cart-line__body">
+                  <h2 class="cart-line__title"><a href="catalog.html">Молочный счётчик Afimilk</a></h2>
+                  <p class="cart-line__desc">Надёжная модель объёмом 500 мл, пластиковый корпус</p>
+                  <div class="cart-line__footer">
+                    <div class="cart-line__qty-wrap">
+                      <span class="cart-line__qty-label">Количество</span>
+                      <div class="cart-item__qty">
+                        <button type="button" data-qty-minus aria-label="Уменьшить">−</button>
+                        <span data-qty-value>7</span>
+                        <button type="button" data-qty-plus aria-label="Увеличить">+</button>
+                      </div>
+                    </div>
+                    <p class="cart-line__subtotal">Итого: <span data-line-total>13 300</span> ₽</p>
+                  </div>
+                </div>
+              </li>
+              <li class="cart-line" data-unit-price="8900">
+                <button type="button" class="cart-line__remove" data-remove-line aria-label="Удалить товар">×</button>
+                <a href="product.html" class="cart-line__img-wrap">
+                  <img
+                    class="cart-line__img"
+                    src="https://images.unsplash.com/photo-1628088062854-d1870b4553da?w=200&q=80"
+                    alt="Пульсатор InterPuls"
+                    width="80"
+                    height="80"
+                  />
+                </a>
+                <div class="cart-line__body">
+                  <h2 class="cart-line__title"><a href="product.html">Пульсатор InterPuls</a></h2>
+                  <p class="cart-line__desc">Стабильная пульсация для ровного доения и здоровья вымени</p>
+                  <div class="cart-line__footer">
+                    <div class="cart-line__qty-wrap">
+                      <span class="cart-line__qty-label">Количество</span>
+                      <div class="cart-item__qty">
+                        <button type="button" data-qty-minus aria-label="Уменьшить">−</button>
+                        <span data-qty-value>1</span>
+                        <button type="button" data-qty-plus aria-label="Увеличить">+</button>
+                      </div>
+                    </div>
+                    <p class="cart-line__subtotal">Итого: <span data-line-total>8 900</span> ₽</p>
+                  </div>
+                </div>
+              </li>
+              <li class="cart-line" data-unit-price="3200">
+                <button type="button" class="cart-line__remove" data-remove-line aria-label="Удалить товар">×</button>
+                <a href="catalog.html" class="cart-line__img-wrap">
+                  <img
+                    class="cart-line__img"
+                    src="https://images.unsplash.com/photo-1560493676-04071c5f467b?w=200&q=80"
+                    alt="Молокопровод 40 мм"
+                    width="80"
+                    height="80"
+                  />
+                </a>
+                <div class="cart-line__body">
+                  <h2 class="cart-line__title"><a href="catalog.html">Молокопровод 40 мм</a></h2>
+                  <p class="cart-line__desc">Пищевой шланг для магистрали, устойчив к моющим средствам</p>
+                  <div class="cart-line__footer">
+                    <div class="cart-line__qty-wrap">
+                      <span class="cart-line__qty-label">Количество</span>
+                      <div class="cart-item__qty">
+                        <button type="button" data-qty-minus aria-label="Уменьшить">−</button>
+                        <span data-qty-value>1</span>
+                        <button type="button" data-qty-plus aria-label="Увеличить">+</button>
+                      </div>
+                    </div>
+                    <p class="cart-line__subtotal">Итого: <span data-line-total>3 200</span> ₽</p>
+                  </div>
+                </div>
+              </li>
+              <li class="cart-line" data-unit-price="1920">
+                <button type="button" class="cart-line__remove" data-remove-line aria-label="Удалить товар">×</button>
+                <a href="catalog.html" class="cart-line__img-wrap">
+                  <img
+                    class="cart-line__img"
+                    src="https://images.unsplash.com/photo-1416879595882-3373a0488b85?w=200&q=80"
+                    alt="Фильтр тонкой очистки"
+                    width="80"
+                    height="80"
+                  />
+                </a>
+                <div class="cart-line__body">
+                  <h2 class="cart-line__title"><a href="catalog.html">Фильтр тонкой очистки</a></h2>
+                  <p class="cart-line__desc">Задерживает механические примеси в молочной линии</p>
+                  <div class="cart-line__footer">
+                    <div class="cart-line__qty-wrap">
+                      <span class="cart-line__qty-label">Количество</span>
+                      <div class="cart-item__qty">
+                        <button type="button" data-qty-minus aria-label="Уменьшить">−</button>
+                        <span data-qty-value>2</span>
+                        <button type="button" data-qty-plus aria-label="Увеличить">+</button>
+                      </div>
+                    </div>
+                    <p class="cart-line__subtotal">Итого: <span data-line-total>3 840</span> ₽</p>
+                  </div>
+                </div>
+              </li>
+            </ul>
+          </section>
+
+          <aside class="checkout-panel" aria-label="Оформление заказа">
+            <h1 class="checkout-panel__title">Оформление заказа</h1>
+            <form class="checkout-form" id="checkoutForm" action="#" method="post">
+              <fieldset class="checkout-form__section">
+                <legend class="checkout-form__legend">Покупатель</legend>
+                <label class="checkout-form__field">
+                  <span class="checkout-form__label">ФИО</span>
+                  <input type="text" name="name" class="checkout-form__input" placeholder="Ваше ФИО" required autocomplete="name" />
+                </label>
+                <label class="checkout-form__field">
+                  <span class="checkout-form__label">Номер телефона</span>
+                  <input type="tel" name="phone" class="checkout-form__input" placeholder="+7 (___) ___-__-__" required autocomplete="tel" />
+                </label>
+                <label class="checkout-form__field">
+                  <span class="checkout-form__label">Email</span>
+                  <input type="email" name="email" class="checkout-form__input" placeholder="example@mail.ru" required autocomplete="email" />
+                </label>
+              </fieldset>
+
+              <fieldset class="checkout-form__section">
+                <legend class="checkout-form__legend">Доставка</legend>
+                <label class="checkout-form__radio">
+                  <input type="radio" name="delivery" value="transport" checked />
+                  <span class="checkout-form__radio-text">
+                    Доставка транспортной компанией
+                    <small>Деловые линии, СДЭК, ПЭК</small>
+                  </span>
+                </label>
+                <label class="checkout-form__radio">
+                  <input type="radio" name="delivery" value="pickup" />
+                  <span class="checkout-form__radio-text">
+                    Самовывоз со склада
+                    <small>г. Ижевск, ул. Промышленная, 1</small>
+                  </span>
+                </label>
+                <label class="checkout-form__field checkout-form__field--address">
+                  <span class="checkout-form__label">Укажите адрес доставки</span>
+                  <textarea name="address" class="checkout-form__textarea" rows="3" placeholder="Город, улица, дом, индекс"></textarea>
+                </label>
+              </fieldset>
+
+              <button type="submit" class="btn btn--primary btn--lg checkout-form__submit">Оформить заказ</button>
+
+              <p class="checkout-panel__total">
+                Общий итог: <strong id="cartGrandTotal">29 240</strong> ₽
+              </p>
+              <p class="checkout-panel__note">Оплата производится по выставленному счёту</p>
+            </form>
+          </aside>
+        </div>
+      </div>
+    </main>
+
+    <footer class="footer" id="contacts">
+      <div class="footer__newsletter-band">
+        <div class="container">
+          <div class="footer__newsletter">
+            <div class="footer__newsletter-text">
+              <h2 class="footer__newsletter-title">Подпишитесь на нашу рассылку</h2>
+              <p class="footer__newsletter-desc">
+                Мы не рассылаем спам. Только полезные новости и специальные предложения
+              </p>
+            </div>
+            <form class="footer__form" action="#" method="post">
+              <input type="email" class="footer__input" placeholder="Ваш email" required aria-label="Email" />
+              <button type="submit" class="btn btn--primary btn--lg btn--footer-subscribe">Подписаться</button>
+            </form>
+          </div>
+        </div>
+      </div>
+      <div class="container footer__body">
+        <div class="footer__main">
+          <div class="footer__brand">
+            <a href="index.html" class="logo" aria-label="Агросистемы">
+              <img src="public/assets/Logo.svg" alt="Агросистемы" class="footer__logo" width="190" height="32" />
+            </a>
+            <p class="footer__tagline">Надёжный поставщик доильного оборудования для молочных ферм</p>
+          </div>
+          <div class="footer__links">
+            <div>
+              <h3 class="footer__col-title">Категории</h3>
+              <ul class="footer__link-list">
+                <li><a href="catalog.html" class="footer__link">DeLaval</a></li>
+                <li><a href="catalog.html" class="footer__link">GEA</a></li>
+                <li><a href="catalog.html" class="footer__link">InterPlus</a></li>
+                <li><a href="catalog.html" class="footer__link">Крепежные элементы</a></li>
+              </ul>
+            </div>
+            <div>
+              <h3 class="footer__col-title footer__col-title--hidden">Категории</h3>
+              <ul class="footer__link-list">
+                <li><a href="catalog.html" class="footer__link">Оборудование для доения</a></li>
+                <li><a href="catalog.html" class="footer__link">Транспортер навозоудаления</a></li>
+              </ul>
+            </div>
+            <div>
+              <h3 class="footer__col-title">Агросистемы</h3>
+              <ul class="footer__link-list">
+                <li><a href="about.html" class="footer__link">О компании</a></li>
+                <li><a href="projects.html" class="footer__link">Проекты</a></li>
+                <li><a href="contacts.html" class="footer__link">Контакты</a></li>
+                <li><a href="cart.html" class="footer__link">Оплата и доставка</a></li>
+              </ul>
+            </div>
+          </div>
+        </div>
+        <div class="footer__bottom">
+          <p class="footer__copy">© 2022. ООО «Агросистемы». Все права защищены</p>
+          <div class="footer__social">
+            <a href="#" aria-label="YouTube"><img src="public/assets/social-youtube.png" alt="" width="24" height="24" /></a>
+            <a href="#" aria-label="ВКонтакте"><img src="public/assets/social-vk.png" alt="" width="24" height="24" /></a>
+          </div>
+        </div>
+      </div>
+    </footer>
+
+    <script src="js/main.js?v=11"></script>
+  </body>
+</html>

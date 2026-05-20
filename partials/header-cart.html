@@ -1,0 +1,124 @@
+<div class="header__cart-wrap">
+            <button
+              type="button"
+              class="header__icon-btn header__icon-btn--cart"
+              id="cartToggle"
+              data-cart-trigger
+              aria-label="Корзина"
+              aria-expanded="false"
+              aria-controls="cartPopover"
+            >
+              <img src="public/assets/icon-cart-black.svg" alt="" width="20" height="20" />
+            </button>
+            <a href="cart.html" class="btn btn--primary btn--cart-desktop" data-cart-trigger>
+              <img src="public/assets/icon-cart.svg" alt="" class="btn__icon" width="20" height="20" />
+              Корзина
+            </a>
+            <div class="cart-popover" id="cartPopover" role="dialog" aria-label="Корзина">
+              <p class="cart-popover__header">Корзина</p>
+              <ul class="cart-popover__list" id="cartPopoverList">
+                <li class="cart-item" data-unit-price="1900">
+                  <img
+                    class="cart-item__img"
+                    src="https://images.unsplash.com/photo-1583337130417-3346a1be7dee?w=200&q=80"
+                    alt="Молочный счётчик Afimilk"
+                  />
+                  <div class="cart-item__info">
+                    <p class="cart-item__name">Молочный счётчик Afimilk</p>
+                    <div class="cart-item__controls">
+                      <div class="cart-item__qty">
+                        <button type="button" data-qty-minus aria-label="Уменьшить">−</button>
+                        <span data-qty-value>1</span>
+                        <button type="button" data-qty-plus aria-label="Увеличить">+</button>
+                      </div>
+                      <p class="cart-item__line-total"><span data-line-total>1 900</span> ₽</p>
+                    </div>
+                  </div>
+                  <button type="button" class="cart-item__remove" data-remove-cart-item aria-label="Удалить">
+                    <svg width="20" height="20" viewBox="0 0 20 20" fill="none" aria-hidden="true">
+                      <path d="M2.5 5h15M6.667 5V3.333a1.667 1.667 0 011.666-1.666h3.334a1.667 1.667 0 011.666 1.666V5m2.5 0v11.667a1.667 1.667 0 01-1.666 1.666H5.833a1.667 1.667 0 01-1.666-1.666V5h11.666" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+                    </svg>
+                  </button>
+                </li>
+                <li class="cart-item" data-unit-price="188">
+                  <img
+                    class="cart-item__img"
+                    src="https://images.unsplash.com/photo-1581091226825-a6a2a5aee158?w=200&q=80"
+                    alt="Молочный счётчик Afimilk"
+                  />
+                  <div class="cart-item__info">
+                    <p class="cart-item__name">Молочный счётчик Afimilk</p>
+                    <div class="cart-item__controls">
+                      <div class="cart-item__qty">
+                        <button type="button" data-qty-minus aria-label="Уменьшить">−</button>
+                        <span data-qty-value>25</span>
+                        <button type="button" data-qty-plus aria-label="Увеличить">+</button>
+                      </div>
+                      <p class="cart-item__line-total"><span data-line-total>4 700</span> ₽</p>
+                    </div>
+                  </div>
+                  <button type="button" class="cart-item__remove" data-remove-cart-item aria-label="Удалить">
+                    <svg width="20" height="20" viewBox="0 0 20 20" fill="none" aria-hidden="true">
+                      <path d="M2.5 5h15M6.667 5V3.333a1.667 1.667 0 011.666-1.666h3.334a1.667 1.667 0 011.666 1.666V5m2.5 0v11.667a1.667 1.667 0 01-1.666 1.666H5.833a1.667 1.667 0 01-1.666-1.666V5h11.666" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+                    </svg>
+                  </button>
+                </li>
+                <li class="cart-item" data-unit-price="3750">
+                  <img
+                    class="cart-item__img"
+                    src="https://images.unsplash.com/photo-1628088062854-d1870b4553da?w=200&q=80"
+                    alt="Молочный счётчик Afimilk"
+                  />
+                  <div class="cart-item__info">
+                    <p class="cart-item__name">Молочный счётчик Afimilk</p>
+                    <div class="cart-item__controls">
+                      <div class="cart-item__qty">
+                        <button type="button" data-qty-minus aria-label="Уменьшить">−</button>
+                        <span data-qty-value>4</span>
+                        <button type="button" data-qty-plus aria-label="Увеличить">+</button>
+                      </div>
+                      <p class="cart-item__line-total"><span data-line-total>15 000</span> ₽</p>
+                    </div>
+                  </div>
+                  <button type="button" class="cart-item__remove" data-remove-cart-item aria-label="Удалить">
+                    <svg width="20" height="20" viewBox="0 0 20 20" fill="none" aria-hidden="true">
+                      <path d="M2.5 5h15M6.667 5V3.333a1.667 1.667 0 011.666-1.666h3.334a1.667 1.667 0 011.666 1.666V5m2.5 0v11.667a1.667 1.667 0 01-1.666 1.666H5.833a1.667 1.667 0 01-1.666-1.666V5h11.666" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+                    </svg>
+                  </button>
+                </li>
+                <li class="cart-item" data-unit-price="456">
+                  <img
+                    class="cart-item__img"
+                    src="https://images.unsplash.com/photo-1560493676-04071c5f467b?w=200&q=80"
+                    alt="Молочный счётчик Afimilk"
+                  />
+                  <div class="cart-item__info">
+                    <p class="cart-item__name">Молочный счётчик Afimilk</p>
+                    <div class="cart-item__controls">
+                      <div class="cart-item__qty">
+                        <button type="button" data-qty-minus aria-label="Уменьшить">−</button>
+                        <span data-qty-value>16</span>
+                        <button type="button" data-qty-plus aria-label="Увеличить">+</button>
+                      </div>
+                      <p class="cart-item__line-total"><span data-line-total>7 296</span> ₽</p>
+                    </div>
+                  </div>
+                  <button type="button" class="cart-item__remove" data-remove-cart-item aria-label="Удалить">
+                    <svg width="20" height="20" viewBox="0 0 20 20" fill="none" aria-hidden="true">
+                      <path d="M2.5 5h15M6.667 5V3.333a1.667 1.667 0 011.666-1.666h3.334a1.667 1.667 0 011.666 1.666V5m2.5 0v11.667a1.667 1.667 0 01-1.666 1.666H5.833a1.667 1.667 0 01-1.666-1.666V5h11.666" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+                    </svg>
+                  </button>
+                </li>
+              </ul>
+              <p class="cart-popover__empty" id="cartPopoverEmpty" hidden>Корзина пуста</p>
+              <div class="cart-popover__footer" id="cartPopoverFooter">
+                <p class="cart-popover__total">
+                  <span class="cart-popover__total-label">Итого:</span><span class="cart-popover__total-value"><strong id="cartPopoverTotal">28 896</strong> ₽</span>
+                </p>
+                <a href="cart.html" class="btn btn--primary btn--lg cart-popover__checkout">
+                  Оформить заказ
+                </a>
+              </div>
+            </div>
+          </div>
+          </div>
